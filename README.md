@@ -22,6 +22,6 @@ The viewer initially fits the complete image on screen. **Actual size** enables 
 
 Check desktop and mobile layouts, both themes, all six image previews, actual-size scrolling, keyboard closing, mobile navigation, and contact/project links. JavaScript syntax can be checked with `node --check script.js`.
 
-Toolkit logos are static and displayed on transparent backgrounds. Decorative star and quantum-orbit graphics are static SVG/CSS. Consolas is used where available, with monospace fallbacks.
+Toolkit logos are static and displayed on transparent backgrounds. Decorative star and quantum-orbit graphics are static SVG/CSS. Consolas is used throughout where available, with monospace fallbacks. The static, transparent toolkit sits alongside the introduction; a fixed orbit-and-constellation network spans the whole page.
 
 The featured internship project and dashboard are sourced from [C8nnect Survey Data Analysis](https://github.com/erika-alexi/C8nnect-Survey-Data-Analysis). The experience summary describes the documented project workflow; it makes no claims about employment dates or business impact.

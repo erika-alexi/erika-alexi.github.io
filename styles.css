@@ -5,7 +5,7 @@
   --line: #332b42; --purple: #bd9aff; --purple-strong: #8b5cf6;
   --yellow: #e9fa80; --button-text: #18151e; --nav-bg: #100e17ed;
   --preview: #211b2d; --grid: #bd9aff0a;
-  --sans: 'Outfit', system-ui, sans-serif; --mono: Consolas, 'Cascadia Mono', 'Courier New', monospace;
+  --mono: Consolas, 'Cascadia Mono', 'Courier New', monospace; --sans: var(--mono);
 }
 [data-theme="light"] {
   color-scheme: light;
@@ -435,4 +435,64 @@ body::after { content: ''; position: fixed; inset: 0; z-index: -1; pointer-event
   .tech-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
   .tech-chip { font-size: 9px; }
   .quantum-art { max-width: 300px; }
+}
+
+/* The toolkit occupies the former orbit area; the universe is the page background. */
+body, button, input, select, textarea { font-family: var(--mono); }
+body::before { background-image: url('assets/universe-network.svg'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: .85; }
+body::after { background: radial-gradient(ellipse at 75% 22%,#7137c52b,transparent 53%),radial-gradient(ellipse at 8% 78%,#7436b51c,transparent 48%); }
+.hero { grid-template-columns: 1.05fr 1fr; gap: 46px; padding-top: 58px; align-items: center; }
+.hero-description { font-size: 13px; line-height: 1.9; max-width: 47ch; }
+.hero h1 { font-size: clamp(43px,5vw,66px); }
+.hero-intro { font-size: clamp(18px,1.85vw,25px); }
+.hero-toolkit { width: 100%; align-self: center; padding: 8px 0; min-width: 0; scroll-margin-top: 110px; }
+.hero-toolkit .section-heading { margin-bottom: 22px; }
+.hero-toolkit .section-heading .eyebrow { font-size: 9px; }
+.hero-toolkit .section-heading h2 { font-size: 20px; letter-spacing: -.045em; line-height: 1.5; margin-top: 8px; color: var(--text); }
+.hero-toolkit .tech-grid { grid-template-columns: repeat(5,minmax(0,1fr)); gap: 18px 8px; padding-block: 4px; }
+.hero-toolkit .tech-chip { min-height: 76px; padding: 4px 0; font-size: 9px; gap: 11px; }
+.hero-toolkit .tech-logo { height: 36px; width: 40px; }
+.hero-toolkit .tech-logo img { height: 31px; width: 31px; }
+.hero-toolkit img[src$="pandas.svg"] { filter: brightness(0) invert(.88); }
+[data-theme="light"] .hero-toolkit img[src$="pandas.svg"] { filter: none; }
+.hero-footer { margin-top: 0; padding-block: 20px; }
+.about-copy p, .experience-entry > div:last-child > p { font-size: 13px; }
+.focus-areas p, .analytics-description { font-size: 12px; }
+.analytics-body h3 { font-size: clamp(24px,2.5vw,32px); }
+.section-heading h2 { font-size: clamp(28px,3vw,39px); line-height: 1.25; letter-spacing: -.055em; }
+.contact-grid h2 { font-size: clamp(32px,3.5vw,46px); }
+.brand-name { font-size: 12px; }
+.nav-links { gap: 20px; }
+.nav-links a { font-size: 11px; }
+.contact-copy p { font-size: 12px; }
+.contact-email { font-size: clamp(15px,1.5vw,19px); }
+[data-theme="light"] body::before { opacity: .38; }
+@media (max-width:1100px) {
+  .hero { gap: 28px; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 10px; }
+  .hero-toolkit .tech-grid { gap: 17px 7px; }
+  .hero-toolkit .tech-chip { font-size: 8px; }
+  .hero-toolkit .section-heading h2 { font-size: 18px; }
+}
+@media (max-width:760px) {
+  .hero { grid-template-columns: 1fr; padding-top: 38px; gap: 34px; }
+  .hero h1 { font-size: clamp(40px,8.5vw,62px); }
+  .hero-intro { font-size: clamp(17px,4.2vw,24px); }
+  .hero-toolkit { padding-top: 24px; border-top: 1px solid var(--line); }
+  .hero-toolkit .section-heading { margin-bottom: 20px; }
+  .hero-toolkit .section-heading h2 { font-size: 19px; }
+  .hero-toolkit .tech-grid { gap: 22px 10px; }
+  .hero-toolkit .tech-chip { min-height: 72px; font-size: 9px; }
+  .hero-toolkit .tech-logo img { height: 29px; width: 29px; }
+  .hero-footer { margin-top: 0; }
+  .hero-footer > span { font-size: 8px; }
+  .section-heading h2 { font-size: 29px; }
+  .contact-grid h2 { font-size: 33px; }
+}
+@media (max-width:380px) {
+  .hero-toolkit .tech-grid { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 19px 8px; }
+  .hero-toolkit .tech-chip { font-size: 8px; }
+  .hero-toolkit .section-heading h2 { font-size: 18px; }
+  .hero-intro { font-size: 17px; }
 }

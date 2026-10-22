@@ -96,17 +96,3 @@ viewerImage.addEventListener('error', () => {
   viewerHint.textContent = 'This image could not load. Please close the preview and try again.';
 });
 
-// Keep decorative motion optional and respect the visitor's system preference.
-const motionToggle = document.getElementById('motionToggle');
-const toolkit = document.getElementById('toolkit');
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let motionPaused = reducedMotion.matches;
-function syncMotion() {
-  toolkit.classList.toggle('motion-paused', motionPaused);
-  toolkit.classList.toggle('motion-enabled', reducedMotion.matches && !motionPaused);
-  motionToggle.setAttribute('aria-pressed', String(motionPaused));
-  motionToggle.textContent = motionPaused ? (reducedMotion.matches ? 'Enable motion' : 'Resume motion') : 'Pause motion';
-}
-motionToggle.addEventListener('click', () => { motionPaused = !motionPaused; syncMotion(); });
-reducedMotion.addEventListener('change', () => { motionPaused = reducedMotion.matches; syncMotion(); });
-syncMotion();

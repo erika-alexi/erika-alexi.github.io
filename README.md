@@ -22,4 +22,6 @@ The viewer initially fits the complete image on screen. **Actual size** enables 
 
 Check desktop and mobile layouts, both themes, all six image previews, actual-size scrolling, keyboard closing, mobile navigation, and contact/project links. JavaScript syntax can be checked with `node --check script.js`.
 
-Toolkit logos float gently and pause on hover. The motion control pauses or resumes animation. Visitors who request reduced motion start with static logos and may explicitly enable motion.
+Toolkit logos are static and displayed on transparent backgrounds. Decorative star and quantum-orbit graphics are static SVG/CSS. Consolas is used where available, with monospace fallbacks.
+
+The featured internship project and dashboard are sourced from [C8nnect Survey Data Analysis](https://github.com/erika-alexi/C8nnect-Survey-Data-Analysis). The experience summary describes the documented project workflow; it makes no claims about employment dates or business impact.
